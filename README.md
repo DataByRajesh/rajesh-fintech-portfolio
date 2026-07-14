@@ -1,13 +1,34 @@
-# Rajesh Kumar Alagesan | FinTech Portfolio
+# Rajesh Kumar Alagesan | FinTech Systems Analyst
 
-This repository serves as a recruiter-facing landing page for Rajesh Kumar Alagesan’s FinTech portfolio. It highlights product, engineering, and digital transformation leadership in a concise, professional format.
+This repository now contains a Next.js App Router portfolio foundation for Rajesh Kumar Alagesan. It is built with TypeScript, Tailwind CSS, pnpm and a static-first structure.
 
-## Highlights
+## Stack
 
-- FinTech product and platform leadership
-- Engineering and delivery excellence
-- Secure, scalable, and customer-focused digital experiences
+- Next.js App Router
+- TypeScript strict mode
+- Tailwind CSS
+- pnpm
+- src/ directory with @/* path alias
+- ESLint
+- Vitest and Testing Library
 
-## Local preview
+## Routes
 
-Open index.html in a browser to view the portfolio landing page.
+- /
+- /experience
+- /projects
+- /skills
+- /about
+- /contact
+
+## Local development
+
+- pnpm install
+- pnpm dev
+
+## Validation
+
+- pnpm lint
+- pnpm typecheck
+- pnpm test
+- pnpm build
