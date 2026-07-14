@@ -13,7 +13,13 @@ export default function ProjectsPage() {
       <p className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">{projectDisclaimer}</p>
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project) => (
-          <ProjectCard key={project.title} title={project.title} summary={project.summary} status={project.status} />
+          <ProjectCard
+            key={project.title}
+            title={project.title}
+            summary={project.summary}
+            status={project.status}
+            href={project.href}
+          />
         ))}
       </div>
     </main>
