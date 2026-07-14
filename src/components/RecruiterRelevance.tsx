@@ -5,22 +5,28 @@ type RecruiterRelevanceProps = {
 
 export function RecruiterRelevance({ roleRelevance, interviewTalkingPoints }: RecruiterRelevanceProps) {
   return (
-    <div className="grid gap-6 md:grid-cols-2">
-      <div>
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div className="min-w-0">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Relevant roles</p>
         <ul className="mt-3 space-y-2">
           {roleRelevance.map((role) => (
-            <li key={role} className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-700">
+            <li
+              key={role}
+              className="min-w-0 break-words rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-700"
+            >
               {role}
             </li>
           ))}
         </ul>
       </div>
-      <div>
+      <div className="min-w-0">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Interview discussion points</p>
         <ul className="mt-3 space-y-2">
           {interviewTalkingPoints.map((point) => (
-            <li key={point} className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 leading-6 text-slate-700">
+            <li
+              key={point}
+              className="min-w-0 break-words rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 leading-6 text-slate-700"
+            >
               {point}
             </li>
           ))}

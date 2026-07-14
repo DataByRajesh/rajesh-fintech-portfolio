@@ -11,9 +11,9 @@ export function EvidenceList({ items, sourceCommitSha, sourceVerificationDate }:
     <div className="space-y-4">
       <ul className="space-y-3">
         {items.map((item) => (
-          <li key={item.label} className="rounded-xl border border-slate-200 bg-white px-4 py-3">
+          <li key={item.label} className="min-w-0 break-words rounded-xl border border-slate-200 bg-white px-4 py-3">
             <p className="text-sm font-semibold text-slate-900">{item.label}</p>
-            <p className="mt-1 leading-6 text-slate-600">{item.detail}</p>
+            <p className="mt-1 break-words leading-6 text-slate-600">{item.detail}</p>
           </li>
         ))}
       </ul>

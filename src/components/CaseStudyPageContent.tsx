@@ -100,24 +100,24 @@ export function CaseStudyPageContent({ slug }: CaseStudyPageContentProps) {
 
       <section className="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm sm:p-10">
         <div className="flex flex-wrap items-center justify-between gap-4">
-          <div>
+          <div className="min-w-0">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Links</p>
-            <p className="mt-2 text-slate-700">
+            <p className="mt-2 break-words text-slate-700">
               Repository:{" "}
               <a
                 href={caseStudy.repositoryUrl}
-                className="font-semibold text-slate-900 underline decoration-slate-400 underline-offset-4 hover:decoration-slate-900"
+                className="break-words font-semibold text-slate-900 underline decoration-slate-400 underline-offset-4 hover:decoration-slate-900"
               >
                 {caseStudy.repositoryUrl}
               </a>
             </p>
-            <p className="mt-2 text-slate-700">
+            <p className="mt-2 break-words text-slate-700">
               {caseStudy.liveDemoUrl ? (
                 <>
                   Live demo:{" "}
                   <a
                     href={caseStudy.liveDemoUrl}
-                    className="font-semibold text-slate-900 underline decoration-slate-400 underline-offset-4 hover:decoration-slate-900"
+                    className="break-words font-semibold text-slate-900 underline decoration-slate-400 underline-offset-4 hover:decoration-slate-900"
                   >
                     {caseStudy.liveDemoUrl}
                   </a>
