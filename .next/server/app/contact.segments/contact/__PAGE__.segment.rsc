@@ -1,5 +1,0 @@
-1:"$Sreact.fragment"
-2:I[62655,["/_next/static/chunks/0ix0srtn742de.js","/_next/static/chunks/3ialrnk38c072.js"],"OutletBoundary"]
-3:"$Sreact.suspense"
-0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"mx-auto flex w-full max-w-6xl flex-1 flex-col gap-8 px-6 py-16 sm:px-8 lg:px-12","children":[["$","div",null,{"className":"space-y-3","children":[["$","p",null,{"className":"text-sm font-semibold uppercase tracking-[0.3em] text-slate-500","children":"Contact"}],["$","h2",null,{"className":"text-2xl font-semibold text-slate-900 sm:text-3xl","children":"Contact details"}],["$","p",null,{"className":"max-w-2xl text-base leading-7 text-slate-600","children":"Contact details are being finalised for this portfolio version."}]]}],["$","section",null,{"className":"rounded-2xl border border-slate-200 bg-white p-8 shadow-sm","children":["$","p",null,{"className":"text-lg leading-8 text-slate-700","children":"Contact details being finalised"}]}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"3C3DHN2xaqzkiPLR-vnxW"}
-4:null
