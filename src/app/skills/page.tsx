@@ -1,5 +1,5 @@
 import { SectionHeading } from "@/components/SectionHeading";
-import { skills } from "@/content/skills";
+import { skillCategories } from "@/content/skills";
 
 export default function SkillsPage() {
   return (
@@ -9,13 +9,20 @@ export default function SkillsPage() {
         title="Core capability areas"
         description="A practical summary of the systems and process skills reflected in the portfolio."
       />
-      <ul className="grid gap-4 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm md:grid-cols-2">
-        {skills.map((skill) => (
-          <li key={skill} className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-slate-700">
-            {skill}
-          </li>
+      <div className="grid gap-6 md:grid-cols-2">
+        {skillCategories.map((category) => (
+          <section key={category.category} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">{category.category}</h3>
+            <ul className="mt-4 space-y-2">
+              {category.items.map((item) => (
+                <li key={item} className="min-w-0 break-words rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-700">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </section>
         ))}
-      </ul>
+      </div>
     </main>
   );
 }

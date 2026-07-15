@@ -2,8 +2,11 @@ import { PrimaryButton } from "@/components/PrimaryButton";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SecondaryButton } from "@/components/SecondaryButton";
 import { SectionHeading } from "@/components/SectionHeading";
+import { SocialProfileLinks } from "@/components/SocialProfileLinks";
+import { VentureCard } from "@/components/VentureCard";
 import { profile } from "@/content/profile";
 import { projectDisclaimer, projects } from "@/content/projects";
+import { ventures } from "@/content/ventures";
 
 export default function HomePage() {
   return (
@@ -18,6 +21,9 @@ export default function HomePage() {
         <div className="mt-8 flex flex-wrap gap-4">
           <PrimaryButton href="/experience" label="View experience" />
           <SecondaryButton href="/projects" label="Review projects" />
+        </div>
+        <div className="mt-4">
+          <SocialProfileLinks variant="full" />
         </div>
       </section>
 
@@ -52,6 +58,19 @@ export default function HomePage() {
               status={project.status}
               href={project.href}
             />
+          ))}
+        </div>
+      </section>
+
+      <section className="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm sm:p-10">
+        <SectionHeading
+          eyebrow="Startup & independent product work"
+          title="Independent product work"
+          description="Separate from FIS employment and the FinTech case studies above — independent startup work through AutoTime AI Ltd."
+        />
+        <div className="mt-6 grid gap-6">
+          {ventures.map((venture) => (
+            <VentureCard key={venture.name} venture={venture} />
           ))}
         </div>
       </section>

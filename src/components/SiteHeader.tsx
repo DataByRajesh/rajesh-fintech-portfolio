@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SocialProfileLinks } from "@/components/SocialProfileLinks";
 import { navigationItems } from "@/content/navigation";
 
 export function SiteHeader() {
@@ -22,6 +23,9 @@ export function SiteHeader() {
             ))}
           </ul>
         </nav>
+        <div className="hidden md:block">
+          <SocialProfileLinks variant="compact" />
+        </div>
       </div>
     </header>
   );

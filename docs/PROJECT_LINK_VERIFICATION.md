@@ -44,3 +44,30 @@ Links can go stale (a deployment can be torn down, a repository can be renamed o
 - Broken anchors on `/projects/payguard-ie` and `/projects/regpulse-ie`.
 - Leaking a protected Preview URL that isn't meant to be public.
 - Publishing a URL that has never actually been confirmed to belong to the intended project.
+
+## Professional profile links
+
+Stored in `src/content/profile.ts` (`profile.socialLinks`). Verified 2026-07-15:
+
+- **GitHub**: `https://github.com/DataByRajesh` — HTTP 200, confirmed via direct fetch and headless-browser render as belonging to "Rajesh kumar Alagesan / DataByRajesh", London, United Kingdom, with the LinkedIn handle below listed in its own bio.
+- **LinkedIn**: `https://www.linkedin.com/in/rajesh-kumar-alagesan/` — redirects to LinkedIn's `authwall` sign-in page for any unauthenticated/non-browser request (HTTP 999). This is LinkedIn's standard anti-scraping behaviour for **every** unauthenticated visitor, not a broken-link signal — a signed-in visitor (e.g. a recruiter with their own LinkedIn account) reaches the real profile normally. The exact vanity handle (`in/rajesh-kumar-alagesan`) is independently corroborated by Rajesh's own GitHub profile bio, which links to it directly. Published on that basis.
+
+## Startup and product links
+
+Stored in `src/content/ventures.ts`. Verified 2026-07-15:
+
+- **AutoTime AI**: `https://www.autotimeai.com` — HTTP 200, no redirect, no certificate warning, confirmed branding ("AutoTime AI — Practical AI tools for focused digital workflows"), no admin controls, secrets or credentials exposed. `websiteStatus: "verified"`.
+- **AutoTime EU Apply**: `https://autotime-eu-apply.vercel.app/` — HTTP 200, no redirect, confirmed as a real private-beta product landing page ("Private Beta v1 — founder-led early access"), no admin controls, secrets or destructive actions exposed. `status: "live"`.
+
+Both were checked via direct HTTP fetch and a full headless-browser render (not just a HEAD request) before being marked verified, per the same rules as case-study live-demo links above. If either page stops loading correctly or changes branding in future work, its status must be set back to `"under-verification"` immediately, following the re-verification procedure above.
+
+## Canonical portfolio URL rule
+
+`profile.portfolioUrl` is the only field that may hold the recruiter portfolio's own canonical Production URL. It must never be set to:
+
+- a Vercel Preview URL for this project;
+- the AutoTime AI website URL;
+- the AutoTime EU Apply product URL;
+- a guessed or assumed Vercel URL (e.g. assuming the project name implies the domain).
+
+It starts `null` and is only set once the portfolio's own dedicated Vercel project has been deployed to Production and the exact returned URL has been manually verified (see `docs/STARTUP_AND_PRODUCT_CONTENT.md`).
