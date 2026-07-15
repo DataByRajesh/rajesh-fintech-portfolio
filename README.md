@@ -2,6 +2,12 @@
 
 This repository now contains a Next.js App Router portfolio foundation for Rajesh Kumar Alagesan. It is built with TypeScript, Tailwind CSS, pnpm and a static-first structure.
 
+## Live portfolio
+
+https://rajesh-fintech-portfolio.vercel.app
+
+This is the recruiter-facing portfolio. It is distinct from the AutoTime AI startup website (`https://www.autotimeai.com`) and the AutoTime EU Apply product (`https://autotime-eu-apply.vercel.app/`), which are Rajesh's separate independent startup work — see `docs/STARTUP_AND_PRODUCT_CONTENT.md`.
+
 ## Stack
 
 - Next.js App Router

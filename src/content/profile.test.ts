@@ -13,8 +13,15 @@ describe("profile content", () => {
     expect(profile.socialLinks.linkedin).toBe("https://www.linkedin.com/in/rajesh-kumar-alagesan/");
   });
 
-  it("keeps portfolioUrl null before Production deployment", () => {
-    expect(profile.portfolioUrl).toBeNull();
+  it("uses the exact verified Production URL as portfolioUrl", () => {
+    expect(profile.portfolioUrl).toBe("https://rajesh-fintech-portfolio.vercel.app");
+  });
+
+  it("does not use a Preview URL, an AutoTime URL, or a guessed URL as portfolioUrl", () => {
+    expect(profile.portfolioUrl).not.toMatch(/-[a-z0-9]{9,}-rajs-projects/);
+    expect(profile.portfolioUrl).not.toBe("https://www.autotimeai.com");
+    expect(profile.portfolioUrl).not.toBe("https://autotime-eu-apply.vercel.app/");
+    expect(profile.portfolioUrl).not.toContain("studio.firebase.google.com");
   });
 
   it("does not reference AutoTime domains in metadata", () => {

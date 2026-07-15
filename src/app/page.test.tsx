@@ -82,8 +82,10 @@ describe("portfolio home page", () => {
     expect(text).not.toMatch(/[\w.-]+@[\w.-]+\.\w+/);
   });
 
-  it("keeps portfolioUrl null before Production deployment", () => {
+  it("does not render a self-referential portfolio link on the homepage", () => {
     render(<HomePage />);
-    expect(screen.queryByText("rajesh-fintech-portfolio.vercel.app")).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole("link", { name: /rajesh-fintech-portfolio\.vercel\.app/i }),
+    ).not.toBeInTheDocument();
   });
 });
