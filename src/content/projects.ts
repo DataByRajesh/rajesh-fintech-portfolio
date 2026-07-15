@@ -3,13 +3,15 @@ export const projects = [
     title: "PayGuard IE",
     summary:
       "Payments operations, reconciliation, exception-investigation and UAT evidence platform for Irish and European FinTech teams.",
-    status: "Portfolio concept",
+    status: "Portfolio evidence",
+    href: "/projects/payguard-ie",
   },
   {
     title: "RegPulse IE",
     summary:
       "DORA-oriented operational resilience, control evidence and remediation platform for Irish and European FinTech teams.",
-    status: "Portfolio concept",
+    status: "Portfolio evidence",
+    href: "/projects/regpulse-ie",
   },
 ];
 
