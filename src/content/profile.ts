@@ -13,6 +13,11 @@ export const profile = {
     "Technical Business Analyst",
   ],
   contactEmail: null,
+  socialLinks: {
+    github: "https://github.com/DataByRajesh",
+    linkedin: "https://www.linkedin.com/in/rajesh-kumar-alagesan/",
+  },
+  portfolioUrl: null as string | null,
   metadataTitle: "Rajesh Kumar Alagesan | FinTech Systems Analyst",
   metadataDescription:
     "FinTech systems professional with FIS banking software experience and practical projects in payments reconciliation, UAT, operational controls and DORA-oriented resilience.",
